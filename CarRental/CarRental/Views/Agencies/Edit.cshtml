@@ -1,0 +1,12 @@
+﻿@model CarRental.Models.Agency
+@{
+    ViewBag.Title = "Editer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editer une agence</h2>
+
+@using (Html.BeginForm("Update", "Agencies", FormMethod.Post, new { @class = "form" }))
+{
+    Html.RenderPartial("_AgencyForm");
+}

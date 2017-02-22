@@ -1,0 +1,12 @@
+﻿@model CarRental.Models.FAQ
+@{
+    ViewBag.Title = "Editer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editer une FAQ</h2>
+
+@using (Html.BeginForm("Update", "FAQs", FormMethod.Post, new { @class = "form" }))
+{
+    Html.RenderPartial("_FaqForm");
+}

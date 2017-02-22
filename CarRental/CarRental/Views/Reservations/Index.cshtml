@@ -1,0 +1,23 @@
+﻿@model IEnumerable<CarRental.Models.Reservation>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Liste des reservations par agence</h2>
+
+<p>
+    @Html.ActionLink("Ajouter une reservation", "New")
+</p>
+
+<ul>
+    @foreach (var reservation in Model)
+    {
+        <li>
+            @reservation.Client.User.UserName @reservation.Client.User.Email @reservation.CarInventory.Car.Brand  @reservation.CarInventory.Car.model @reservation.DateStart @reservation.DateEnd @reservation.ReservationStatus @reservation.DailyRate $
+            @Html.ActionLink("Editer", "Edit", new { id = reservation.Id }) |
+            @Html.ActionLink("Effacer", "Delete", new { id = reservation.Id })
+        </li>
+    }
+</ul>
+

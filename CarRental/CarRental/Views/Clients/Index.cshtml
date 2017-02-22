@@ -1,0 +1,23 @@
+﻿@model IEnumerable<CarRental.Models.Client>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Liste des Clients</h2>
+
+<p>
+    @Html.ActionLink("Ajouter un client", "New")
+</p>
+
+<ul>
+    @foreach (var client in Model)
+    {
+        <li>
+            @client.User.UserName  @client.User.Email @client.BirthDate (@client.DriverLicenseNUmber) 
+            @Html.ActionLink("Editer", "Edit", new { id = client.Id }) |
+            @Html.ActionLink("Effacer", "Delete", new { id = client.Id })
+        </li>
+    }
+</ul>
+

@@ -1,0 +1,29 @@
+﻿@model CarRental.Models.Agency
+@{
+    ViewBag.Title = "Effacer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Effacer une agence</h2>
+
+<p>
+    Êtes-vous certains de vouloir effacer l'agence?
+</p>
+<ul>
+    <li>Nom: @Model.Name</li>
+    <li>Division: @Model.Division</li>
+    <li>No.: @Model.CivicNumber</li>
+    <li>Rue: @Model.StreetName</li>
+    <li>Suite: @Model.Suite</li>
+    <li>Ville: @Model.City</li>
+    <li>Province: @Model.Province</li>
+    <li>Pays: @Model.State</li>
+</ul>
+
+@using (Html.BeginForm("DoDelete", "Agencies", FormMethod.Post))
+{
+
+    @Html.HiddenFor(m => m.Id)
+    <input type="submit" class="btn btn-danger" value="Oui, Effacer l'agence? " />
+    @Html.ActionLink("Non, retourner à la liste de agences", "Index")
+}

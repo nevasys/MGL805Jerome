@@ -1,0 +1,25 @@
+﻿@model CarRental.Models.FAQ
+
+@{
+    ViewBag.Title = "Effacer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Effacer une FAQ</h2>
+
+<p>
+    Êtes-vous certains de vouloir effacer la FAQ?
+</p>
+<ul>
+    <li>Question: @Model.Question</li>
+    <li>Reponse: @Model.Answer</li>
+    <li>Actif: @Model.IsActive</li>
+</ul>
+
+@using (Html.BeginForm("DoDelete", "FAQs", FormMethod.Post))
+{
+
+    @Html.HiddenFor(m => m.Id)
+    <input type="submit" class="btn btn-danger" value="Oui, Effacer la FAQ" />
+    @Html.ActionLink("Non, retourner à la liste de FAQs", "Index")
+}

@@ -1,0 +1,29 @@
+﻿@model CarRental.Models.Car
+
+@{
+    ViewBag.Title = "Effacer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Effacer une voiture</h2>
+
+<p>
+    Êtes-vous certains de vouloir effacer la voiture?
+</p>
+<ul>
+    <li>Marque: @Model.Brand</li>
+    <li>Modèle: @Model.model</li>
+    <li>Description: @Model.Description</li>
+    <li>Catégorie: @Model.Type</li>
+    <li>Nombre de portes: @Model.NumberOfDoors</li>
+    <li>Puissance (Hp): @Model.HorsePower</li>
+    <li>Taux journalier ($): @Model.DailyRate</li>
+</ul>
+
+@using (Html.BeginForm("DoDelete", "Cars", FormMethod.Post))
+{
+
+    @Html.HiddenFor(m => m.Id)
+    <input type="submit" class="btn btn-danger" value="Oui, Effacer la voiture" />
+    @Html.ActionLink("Non, retourner à la liste de voitures", "Index")
+}

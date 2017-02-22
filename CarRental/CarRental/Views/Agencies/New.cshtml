@@ -1,0 +1,12 @@
+﻿@model CarRental.Models.Agency
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Ajouter une agence</h2>
+
+@using (Html.BeginForm("Add", "Agencies", FormMethod.Post, new { @class = "form" }))
+{
+    Html.RenderPartial("_AgencyForm");
+}

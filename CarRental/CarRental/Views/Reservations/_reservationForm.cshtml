@@ -1,0 +1,110 @@
+﻿@model CarRental.Models.Reservation
+
+<div class="form-group">
+    <p><strong>Client</strong></p>
+    @Html.DropDownList("ClientId",
+        ViewBag.ClientsBag as IEnumerable<SelectListItem>, String.Empty)
+    @Html.ValidationMessageFor(m => m.ClientId)
+</div>
+
+<div class="form-group">
+    <p><strong>Modele en inventaire</strong></p>
+    @Html.DropDownList("CarInventoryId",
+        ViewBag.carInventoriesBag as IEnumerable<SelectListItem>, String.Empty)
+    @Html.ValidationMessageFor(m => m.CarInventoryId)
+</div>
+
+@*<div class="form-group">
+    <p><strong>Name</strong></p>
+    @Html.TextBoxFor(m => m.Client.User.UserName, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    <p><strong>Courriel</strong></p>
+    @Html.TextBoxFor(m => m.Client.User.Email, new { @class = "form-control" }) 
+</div>
+
+<div class="form-group">
+    <p><strong>Marque</strong></p>
+    @Html.TextBoxFor(m => m.CarInventory.Car.Brand, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    <p><strong>Modele</strong></p>
+    @Html.TextBoxFor(m => m.CarInventory.Car.model, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    <p><strong>Type de voiture</strong></p>
+    @Html.EnumDropDownListFor(m => m.CarInventory.Car.Type, new { @class = "form-control" })
+</div>*@
+
+<div class="form-group">
+    <p><strong>Date de debut</strong></p>
+    @Html.TextBoxFor(m => m.DateStart, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Date de fin</strong></p>
+    @Html.TextBoxFor(m => m.DateEnd, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Odometre au debut</strong></p>
+    @Html.TextBoxFor(m => m.OdometerStart, new { @class = "form-control" }) km
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Odometre a la fin</strong></p>
+    @Html.TextBoxFor(m => m.OdometerEnd, new { @class = "form-control" }) km
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.Type)*@
+    <p><strong>Status</strong></p>
+    @Html.EnumDropDownListFor(m => m.ReservationStatus, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Taux journalier ($)</strong></p>
+    @Html.TextBoxFor(m => m.DailyRate, "{0:###.##}") $
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Montant ($)</strong></p>
+    @Html.TextBoxFor(m => m.Amount, "{0:###.##}") $
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Tax provincial ($)</strong></p>
+    @Html.TextBoxFor(m => m.ProvincialTax, "{0:###.##}") $
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Tax Federal ($)</strong></p>
+    @Html.TextBoxFor(m => m.FederalTax, "{0:###.##}") $
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Montant Total ($)</strong></p>
+    @Html.TextBoxFor(m => m.TotalAmount, "{0:###.##}") $
+</div>
+
+@*<div class="form-group">
+    <p><strong>Actif</strong></p>
+    @Html.CheckBoxFor(m => m.IsActive)
+</div>*@
+
+@Html.HiddenFor(m => m.Id)
+<input type="submit" class="btn btn-primary" value="Sauvegarder" />
+
+
+

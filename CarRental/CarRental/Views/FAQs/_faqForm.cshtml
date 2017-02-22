@@ -1,0 +1,16 @@
+﻿@model CarRental.Models.FAQ
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.Brand)*@
+    <p><strong>Question</strong></p>
+    @Html.TextBoxFor(m => m.Question, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Reponse</strong></p>
+    @Html.TextBoxFor(m => m.Answer, new { @class = "form-control" })
+</div>
+
+@Html.HiddenFor(m => m.Id)
+<input type="submit" class="btn btn-primary" value="Sauvegarder" />

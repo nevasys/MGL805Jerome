@@ -1,0 +1,22 @@
+﻿@model IEnumerable<CarRental.Models.Car>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Liste des modèles de voiture</h2>
+
+<p>
+    @Html.ActionLink("Ajouter un modèle de voiture", "New")
+</p>
+
+<ul>
+    @foreach (var car in Model)
+    {
+        <li>@car.Brand  @car.model @car.Type (@car.Description) @car.NumberOfDoors Portes @car.HorsePower hp @car.DailyRate $
+            @Html.ActionLink("Editer", "Edit", new { id = car.Id }) |
+            @Html.ActionLink("Effacer", "Delete", new { id = car.Id })
+    </li>
+    }
+</ul>

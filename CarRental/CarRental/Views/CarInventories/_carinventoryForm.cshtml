@@ -1,0 +1,73 @@
+﻿@model CarRental.Models.CarInventory
+
+<div class="form-group">
+    <p><strong>Agence</strong></p>
+    @Html.DropDownList("AgencyId",
+        ViewBag.AgenciesBag as IEnumerable<SelectListItem>, String.Empty)  
+    @Html.ValidationMessageFor(m => m.AgencyId) 
+</div>
+
+<div class="form-group">
+    <p><strong>Modele</strong></p>
+    @Html.DropDownList("CarId",
+        ViewBag.CarsBag as IEnumerable<SelectListItem>, String.Empty)
+    @Html.ValidationMessageFor(m => m.CarId)
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Annee</strong></p>
+    @Html.TextBoxFor(m => m.year, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Taux journalier ($)</strong></p>
+    @Html.TextBoxFor(m => m.DailyRate, "{0:###.##}") $
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Odometer</strong></p>
+    @Html.TextBoxFor(m => m.Odometer, new { @class = "form-control" }) km
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Air conditionne</strong></p>
+    @Html.CheckBoxFor(m => m.AirConditionner)
+</div>
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>DVD</strong></p>
+    @Html.CheckBoxFor(m => m.DVDplayer)
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Navigation</strong></p>
+    @Html.CheckBoxFor(m => m.NavigationSystem)
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>MP3</strong></p>
+    @Html.CheckBoxFor(m => m.MP3player)
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Numero de serie</strong></p>
+    @Html.TextBoxFor(m => m.SerialNumber, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Actif</strong></p>
+    @Html.CheckBoxFor(m => m.IsActive)
+</div>
+
+@Html.HiddenFor(m => m.Id)
+<input type="submit" class="btn btn-primary" value="Sauvegarder" />
+
+

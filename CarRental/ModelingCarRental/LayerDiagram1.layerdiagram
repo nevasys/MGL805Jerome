@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="85909090-3478-4551-b7a2-c1e1cfbcd9fa" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="bc769b35-0750-44e1-8d02-aa3c064bc109" name="Couche Présentation">
+      <childLayers>
+        <layer Id="129a6ab5-c61f-43cc-8e08-56612fa7f161" name="Pages Web Razor" />
+        <layer Id="7b91ded8-db95-47e9-b5db-7bfc64af1f96" name="Web Api">
+          <childLayers>
+            <layer Id="f9458a94-6558-41e8-a995-4e1facc0b47f" name="Google Api" />
+          </childLayers>
+        </layer>
+        <layer Id="b2aba8bc-b2b3-43d2-90af-3acc5fe5dd66" name="Courriel &amp; Rapport" />
+      </childLayers>
+    </layer>
+    <layer Id="c08e5cf3-7a1e-4bd0-a915-862b6bd54111" name="Couche Affaires">
+      <childLayers>
+        <layer Id="c9bfbffc-3e26-4a8d-a8b8-41a356c4a8a6" name="Gestion des Agences">
+          <references>
+            <reference Id="1cee6e00-4678-4ddd-b26c-785411d66046" name="AgenciesController">
+              <ArtifactNode Label="AgenciesController" Category="CodeSchema_Type" Id="(Assembly=../CarRental/bin/CarRental.dll Namespace=CarRental.Controllers Type=AgenciesController)" />
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Controllers Type=AgenciesController)" Label="AgenciesController" Category="CodeSchema_Type">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="56e43342-bb28-446b-bf4f-ada79f76f5df" name="Gestion modèles de voitures">
+          <references>
+            <reference Id="cf52c6f1-1f8a-4799-8638-4170b5c955cb" name="CarsController">
+              <ArtifactNode Label="CarsController" Category="CodeSchema_Type" Id="(Assembly=../CarRental/bin/CarRental.dll Namespace=CarRental.Controllers Type=CarsController)" />
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Controllers Type=CarsController)" Label="CarsController" Category="CodeSchema_Type">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="34ce0be7-2b51-418c-8544-2e1f4c878bfd" name="Gestion des Clients">
+          <references>
+            <reference Id="b5256fd9-003e-474a-851a-713ee3b6a896" name="ClientsController">
+              <ArtifactNode Label="ClientsController" Category="CodeSchema_Type" Id="(Assembly=../CarRental/bin/CarRental.dll Namespace=CarRental.Controllers Type=ClientsController)" />
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Controllers Type=ClientsController)" Label="ClientsController" Category="CodeSchema_Type">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="be6ed839-0e92-4daa-9d45-77389e219be7" name="Gestion des Inventaires de voitures">
+          <references>
+            <reference Id="fcfea92a-7b3c-4d32-bf3a-554c64f4f53c" name="CarInventoriesController.cs">
+              <ArtifactNode Label="CarInventoriesController.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../CarRental/CarRental.csproj File=../CarRental/Controllers/CarInventoriesController.cs)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Controllers Type=CarInventoriesController)" Label="CarInventoriesController" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="b60c5fe0-662c-4202-a243-63b154eb53b8" name="Gestion des réservations">
+          <references>
+            <reference Id="5d38f8de-0b12-4406-acfe-d0544b94de5d" name="ReservationsController.cs">
+              <ArtifactNode Label="ReservationsController.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../CarRental/CarRental.csproj File=../CarRental/Controllers/ReservationsController.cs)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Controllers Type=ReservationsController)" Label="ReservationsController" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="80b3a20e-517c-4f9c-b07a-ed872bc422fe" name="Gestion des FAQs">
+          <references>
+            <reference Id="e439f24a-1b9a-4228-a1ac-8ef28038dcd4" name="FAQsController.cs">
+              <ArtifactNode Label="FAQsController.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../CarRental/CarRental.csproj File=../CarRental/Controllers/FAQsController.cs)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Controllers Type=FAQsController)" Label="FAQsController" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="42562dd2-251e-402d-a852-b83faa7c7683" name="Couche Données">
+      <childLayers>
+        <layer Id="a1a2ee82-2309-4b2c-ad03-751b41d51abd" name="Agences">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="f3919614-c1d8-42ac-ab0e-ad7d3a071a06" direction="Forward">
+              <layerMoniker Id="f31a9c10-8109-419f-8b04-1b01f223b18c" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="4f487385-f262-4166-ab46-9be5516b3996" direction="Forward">
+              <layerMoniker Id="612faed1-dc1e-4638-9aea-c6cb12b5d40d" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="00f600ad-2476-4f6c-8935-d0a218982edf" name="Agency">
+              <ArtifactNode Label="Agency" Category="CodeSchema_Type" Id="(Assembly=../CarRental/bin/CarRental.dll Namespace=CarRental.Models Type=Agency)" />
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Models Type=Agency)" Label="Agency" Category="CodeSchema_Type">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="d6669c02-2f7e-46d6-ad2c-2e2149e5ec06" name="Modèles de voitures">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="13e658a1-7452-484f-92f5-098fe578b74d" direction="Forward">
+              <layerMoniker Id="c3370b39-3c20-43c6-bfee-3fe366b6fa24" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="1dafc1ee-091a-42b5-b65d-7386ec12473e" direction="Forward">
+              <layerMoniker Id="560c0301-1223-4ac1-81fa-887a2b51a364" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="16147bbd-6baa-420f-bccb-78de3b9dd9f2" direction="Forward">
+              <layerMoniker Id="880aaccb-19a9-42ce-8a44-83254de5b682" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="901e942b-e720-45b3-be6f-5b6dfd7bd99e" name="Car">
+              <ArtifactNode Label="Car" Category="CodeSchema_Type" Id="(Assembly=../CarRental/bin/CarRental.dll Namespace=CarRental.Models Type=Car)" />
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Models Type=Car)" Label="Car" Category="CodeSchema_Type">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="ba619ee0-5eae-4f46-8366-85757a55665b" name="Clients">
+          <references>
+            <reference Id="172b2909-0c30-4019-9d39-3a6f47fff9a0" name="Client">
+              <ArtifactNode Label="Client" Category="CodeSchema_Type" Id="(Assembly=../CarRental/bin/CarRental.dll Namespace=CarRental.Models Type=Client)" />
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Models Type=Client)" Label="Client" Category="CodeSchema_Type">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="f31a9c10-8109-419f-8b04-1b01f223b18c" name="Province">
+          <references>
+            <reference Id="73a49188-b828-4540-86fb-510a220d63fb" name="province">
+              <ArtifactNode Label="province" Category="CodeSchema_Type" Id="(Assembly=../CarRental/bin/CarRental.dll Namespace=CarRental.Models Type=province)" />
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Models Type=province)" Label="province" Category="CodeSchema_Type">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="560c0301-1223-4ac1-81fa-887a2b51a364" name="Nombre de portes">
+          <references>
+            <reference Id="94889a3e-e8c2-41a0-a381-ca463ebb3962" name="numberOfDoor">
+              <ArtifactNode Label="numberOfDoor" Category="CodeSchema_Type" Id="(Assembly=../CarRental/bin/CarRental.dll Namespace=CarRental.Models Type=numberOfDoor)" />
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Models Type=numberOfDoor)" Label="numberOfDoor" Category="CodeSchema_Type">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="880aaccb-19a9-42ce-8a44-83254de5b682" name="Nombre de passagers">
+          <references>
+            <reference Id="3bf47e36-65c8-44db-914b-3907e27adda3" name="numberOfPassenger">
+              <ArtifactNode Label="numberOfPassenger" Category="CodeSchema_Type" Id="(Assembly=../CarRental/bin/CarRental.dll Namespace=CarRental.Models Type=numberOfPassenger)" />
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Models Type=numberOfPassenger)" Label="numberOfPassenger" Category="CodeSchema_Type">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="612faed1-dc1e-4638-9aea-c6cb12b5d40d" name="Pays">
+          <references>
+            <reference Id="874e0e53-04bc-40f6-b18c-baf597a27e87" name="state">
+              <ArtifactNode Label="state" Category="CodeSchema_Type" Id="(Assembly=../CarRental/bin/CarRental.dll Namespace=CarRental.Models Type=state)" />
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Models Type=state)" Label="state" Category="CodeSchema_Type">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="7ddc6a90-7427-45c4-9ced-b2c8f790688a" name="Inventiares de voitures">
+          <references>
+            <reference Id="9c285152-1536-4016-b394-58112dcf1a86" name="CarInventory.cs">
+              <ArtifactNode Label="CarInventory.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../CarRental/CarRental.csproj File=../CarRental/Models/CarInventory.cs)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Models Type=CarInventory)" Label="CarInventory" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="c166bc7e-0aa6-4010-887d-50cbbd795223" name="Reservations">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="840d2341-b633-49b2-856c-11b62303f0f2" direction="Forward">
+              <layerMoniker Id="b9286735-e14d-4f9b-a228-ec1bfd72dcdc" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="4e1f225d-18cc-4644-a1b1-4d47fa969c51" name="Reservation.cs">
+              <ArtifactNode Label="Reservation.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../CarRental/CarRental.csproj File=../CarRental/Models/Reservation.cs)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Models Type=reservationStatus)" Label="reservationStatus" Category="CodeSchema_Enum">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Models Type=Reservation)" Label="Reservation" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="b9286735-e14d-4f9b-a228-ec1bfd72dcdc" name="Status de réservation">
+          <references>
+            <reference Id="0c17101c-b144-452a-8987-6902d52c3927" name="reservationStatus">
+              <ArtifactNode Label="reservationStatus" Category="CodeSchema_Enum" Id="(Assembly=../CarRental/bin/CarRental.dll Namespace=CarRental.Models Type=reservationStatus)" />
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Models Type=reservationStatus)" Label="reservationStatus" Category="CodeSchema_Enum">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="28aa15cc-beb9-402b-b7a4-2a5bb3ce130f" name="FAQs">
+          <references>
+            <reference Id="dcc74d0e-abd0-4a89-b23a-4016b6526eea" name="FAQ.cs">
+              <ArtifactNode Label="FAQ.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../CarRental/CarRental.csproj File=../CarRental/Models/FAQ.cs)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Models Type=FAQ)" Label="FAQ" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="c3370b39-3c20-43c6-bfee-3fe366b6fa24" name="Type de modèles">
+      <references>
+        <reference Id="ece864ad-cb08-4289-9840-03fe6a2608b9" name="carType">
+          <ArtifactNode Label="carType" Category="CodeSchema_Type" Id="(Assembly=../CarRental/bin/CarRental.dll Namespace=CarRental.Models Type=carType)" />
+          <ExpandedNode Id="(Assembly=CarRental Namespace=CarRental.Models Type=carType)" Label="carType" Category="CodeSchema_Type">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

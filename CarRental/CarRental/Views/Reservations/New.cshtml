@@ -1,0 +1,12 @@
+﻿@model CarRental.Models.Reservation
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Ajouter une reservation</h2>
+
+@using (Html.BeginForm("Add", "Reservations", FormMethod.Post, new { @class = "form" }))
+{
+    Html.RenderPartial("_reservationForm");
+}

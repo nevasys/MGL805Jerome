@@ -1,0 +1,22 @@
+﻿@model IEnumerable<CarRental.Models.Agency>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Liste des Agences</h2>
+
+<p>
+    @Html.ActionLink("Ajouter une agence", "New")
+</p>
+
+<ul>
+    @foreach (var agency in Model)
+    {
+        <li>
+            @agency.Name  (@agency.Division) @agency.CivicNumber @agency.StreetName @agency.Suite @agency.City @agency.Province @agency.PostalCode
+            @Html.ActionLink("Editer", "Edit", new { id = agency.Id }) |
+            @Html.ActionLink("Effacer", "Delete", new { id = agency.Id })
+        </li>
+    }
+</ul>

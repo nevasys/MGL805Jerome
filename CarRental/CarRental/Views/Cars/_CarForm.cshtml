@@ -1,0 +1,57 @@
+﻿@model CarRental.Models.Car
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.Brand)*@
+    <p><strong>Marque</strong></p>
+    @Html.TextBoxFor(m => m.Brand, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Modèle</strong></p>
+    @Html.TextBoxFor(m => m.model, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(m => m.Description)
+    @Html.TextAreaFor(m => m.Description, new { @class = "form-control", rows = 4 })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.Type)*@
+    <p><strong>Catégorie</strong></p>
+    @Html.EnumDropDownListFor(m => m.Type, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.NumberOfDoors)*@
+    <p><strong>Nombre de portes</strong></p>
+    @Html.EnumDropDownListFor(m => m.NumberOfDoors, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.NumberOfDoors)*@
+    <p><strong>Nombre de passagers</strong></p>
+    @Html.EnumDropDownListFor(m => m.NumberOfPassenger, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.HorsePower)*@
+    <p><strong>Puissance (Hp)</strong></p>
+    @Html.TextBoxFor(m => m.HorsePower, "{0:#}")
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Taux journalier ($)</strong></p>
+    @Html.TextBoxFor(m => m.DailyRate, "{0:###.##}")
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Actif</strong></p>
+    @Html.CheckBoxFor(m => m.IsActive)
+</div>
+
+@Html.HiddenFor(m => m.Id)
+<input type="submit" class="btn btn-primary" value="Sauvegarder" />

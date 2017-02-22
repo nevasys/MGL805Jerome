@@ -1,0 +1,31 @@
+﻿@model IEnumerable<CarRental.Models.FAQ>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Liste des FAQs</h2>
+
+<p>
+@if (User.IsInRole("Admin") || User.IsInRole("Agence"))
+{
+    @Html.ActionLink("Ajouter une FAQ", "New")
+}
+</p>
+
+<ul>
+    @foreach (var faq in Model)
+    {
+        <li>
+            <strong>@faq.Question</strong>
+            <br />
+            @faq.Answer
+            @if (User.IsInRole("Admin") || User.IsInRole("Agence"))
+            {
+            @Html.ActionLink("Editer", "Edit", new { id = faq.Id }) @Html.Raw(" ")
+            @Html.ActionLink("Effacer", "Delete", new { id = faq.Id });
+            }     
+            
+        </li>
+    }
+</ul>

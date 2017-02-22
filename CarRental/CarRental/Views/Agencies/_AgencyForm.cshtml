@@ -1,0 +1,101 @@
+﻿@model CarRental.Models.Agency
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.Name)*@
+    <p><strong>Nom</strong></p>
+    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.Division)*@
+    <p><strong>Division</strong></p>
+    @Html.TextBoxFor(m => m.Division, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.AffiliatedWith)*@
+    <p><strong>Affiliée à</strong></p>
+    @Html.TextBoxFor(m => m.AffiliatedWith, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.CivicNumber)*@
+    <p><strong>Numéro civique</strong></p>
+    @Html.TextBoxFor(m => m.CivicNumber, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.StreetName)*@
+    <p><strong>Rue</strong></p>
+    @Html.TextBoxFor(m => m.StreetName, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.Suite)*@
+    <p><strong>Suite</strong></p>
+    @Html.TextBoxFor(m => m.Suite, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.City)*@
+    <p><strong>Ville</strong></p>
+    @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.Province)*@
+    <p><strong>Province</strong></p>
+    @Html.EnumDropDownListFor(m => m.Province, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.State)*@
+    <p><strong>Pays</strong></p>
+    @Html.EnumDropDownListFor(m => m.State, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.PostalCode)*@
+    <p><strong>Code postal</strong></p>
+    @Html.TextBoxFor(m => m.PostalCode, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.TelephoneNumber)*@
+    <p><strong>Téléphone</strong></p>
+    @Html.TextBoxFor(m => m.TelephoneNumber, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.FaxNumber)*@
+    <p><strong>Fax</strong></p>
+    @Html.TextBoxFor(m => m.FaxNumber, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.Email)*@
+    <p><strong>Courriel</strong></p>
+    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.Longitude)*@
+    <p><strong>Longitude</strong></p>
+    @Html.TextBoxFor(m => m.Longitude, "{0:###.######}")
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.Latitude)*@
+    <p><strong>Latitude</strong></p>
+    @Html.TextBoxFor(m => m.Latitude, "{0:###.######}")
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Actif</strong></p>
+    @Html.CheckBoxFor(m => m.IsActive)
+</div>
+
+@Html.HiddenFor(m => m.Id)
+<input type="submit" class="btn btn-primary" value="Sauvegarder" />
+

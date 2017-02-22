@@ -1,0 +1,29 @@
+﻿@model CarRental.Models.Reservation
+
+@{
+    ViewBag.Title = "Effacer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Effacer une reservation</h2>
+
+<p>
+    Êtes-vous certains de vouloir effacer la reservation du client?
+</p>
+<ul>
+    <li>Client: @Model.Client.User.UserName @Model.Client.User.Email </li>
+    <li>Marque: @Model.CarInventory.Car.Brand  </li>
+    <li>Modèle: @Model.CarInventory.Car.model</li>
+    <li>Date de debut: @Model.DateStart</li>
+    <li>Date de fin: @Model.DateEnd</li>
+    <li>Status: @Model.ReservationStatus</li>
+    <li>Taux journalier ($): @Model.DailyRate $ </li>
+</ul>
+
+@using (Html.BeginForm("DoDelete", "Reservations", FormMethod.Post))
+{
+
+    @Html.HiddenFor(m => m.Id)
+    <input type="submit" class="btn btn-danger" value="Oui, Effacer la reservation du client" />
+    @Html.ActionLink("Non, retourner à la liste de reservations", "Index")
+}

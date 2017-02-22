@@ -1,0 +1,41 @@
+﻿@model CarRental.Models.Client
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.Brand)*@
+    <p><strong>Nom de l'usager</strong></p>
+    @Html.TextBoxFor(m => m.User.UserName, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Courriel</strong></p>
+    @Html.TextBoxFor(m => m.User.Email, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.BirthDate)*@
+    <p><strong>Date de naissance</strong></p>
+    @Html.TextBoxFor(m => m.BirthDate, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Permis de conduire valide</strong></p>
+    @Html.CheckBoxFor(m => m.HasValidDriverLicense)
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.HorsePower)*@
+    <p><strong>Numéro de permis de conduire</strong></p>
+    @Html.TextBoxFor(m => m.DriverLicenseNUmber, "{0:#}")
+</div>
+
+<div class="form-group">
+    @*@Html.LabelFor(m => m.model)*@
+    <p><strong>Actif</strong></p>
+    @Html.CheckBoxFor(m => m.IsActive)
+</div>
+
+@Html.HiddenFor(m => m.Id)
+<input type="submit" class="btn btn-primary" value="Sauvegarder" />
+

@@ -1,0 +1,12 @@
+﻿@model CarRental.Models.Client
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Ajouter un client</h2>
+
+@using (Html.BeginForm("Add", "Clients", FormMethod.Post, new { @class = "form" }))
+{
+    Html.RenderPartial("_ClientForm");
+}

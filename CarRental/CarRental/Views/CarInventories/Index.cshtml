@@ -1,0 +1,23 @@
+﻿@model IEnumerable<CarRental.Models.CarInventory>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Liste des inventaires des agences</h2>
+
+<p>
+    @Html.ActionLink("Ajouter un voiture à une agence", "New")
+</p>
+
+<ul>
+    @foreach (var inventory in Model)
+    {
+        <li>
+            @inventory.Agency.Name @inventory.Agency.Division @inventory.Agency.CivicNumber  @inventory.Agency.StreetName @inventory.Agency.Province @inventory.Agency.PostalCode @inventory.Car.Brand @inventory.Car.model @inventory.Odometer km @inventory.year @inventory.DailyRate $
+            @Html.ActionLink("Editer", "Edit", new { id = inventory.Id }) |
+            @Html.ActionLink("Effacer", "Delete", new { id = inventory.Id })
+        </li>
+    }
+</ul>
+

@@ -1,0 +1,28 @@
+﻿@model CarRental.Models.Client
+
+@{
+    ViewBag.Title = "Effacer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Effacer un client</h2>
+
+<p>
+    Êtes-vous certains de vouloir effacer le client?
+</p>
+<ul>
+    <li>Nom d'usager: @Model.User.UserName</li>
+    <li>Courriel: @Model.User.Email</li>
+    <li>Date de naissance: @Model.BirthDate</li>
+    <li>Numéro de permis de conduire: @Model.DriverLicenseNUmber</li>
+    <li>Permis valide: @Model.HasValidDriverLicense</li>
+    <li>Actif: @Model.IsActive</li>
+</ul>
+
+@using (Html.BeginForm("DoDelete", "Clients", FormMethod.Post))
+{
+
+    @Html.HiddenFor(m => m.Id)
+    <input type="submit" class="btn btn-danger" value="Oui, Effacer le client" />
+    @Html.ActionLink("Non, retourner à la liste de clients", "Index")
+}

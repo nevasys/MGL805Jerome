@@ -1,0 +1,12 @@
+﻿@model CarRental.Models.CarInventory
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Ajouter une voiture a un inventaire dagence</h2>
+
+@using (Html.BeginForm("Add", "CarInventories", FormMethod.Post, new { @class = "form" }))
+{
+    Html.RenderPartial("_carinventoryForm");
+}

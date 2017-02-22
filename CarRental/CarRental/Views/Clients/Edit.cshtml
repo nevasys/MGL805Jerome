@@ -1,0 +1,12 @@
+﻿@model CarRental.Models.Client
+@{
+    ViewBag.Title = "Editer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editer un client</h2>
+
+@using (Html.BeginForm("Update", "Clients", FormMethod.Post, new { @class = "form" }))
+{
+    Html.RenderPartial("_ClientForm");
+}
